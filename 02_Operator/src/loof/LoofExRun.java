@@ -16,7 +16,8 @@ public class LoofExRun {
 //        LoofEx l = new LoofEx();
 //        l.method1();
 //    }
-     LoofEx2 l2 = new LoofEx2();
-        l2.while3();
+//     LoofEx2 l2 = new LoofEx2();
+//        l2.while3();
+        DoWhileloof dwl = new DoWhileloof;
     }
 }
