@@ -124,7 +124,8 @@ public class Practice1 {
     }
 
     public void method10() {
-        while (true) {
+        boolean isTrue = true;
+        while (isTrue) {
 
             System.out.println("-------실행할 기능을 선택하세요.-----");
             System.out.println("1. 메뉴 출력");
@@ -163,6 +164,7 @@ public class Practice1 {
                     break;
                 case 0:
                     System.out.println("프로그램 종료");
+                    isTrue = false;
                     //while 옆 true 부분을 변수 isTrue 에 담기
                     //isTrue = false 표현해서 종료하기
                     break;
@@ -171,6 +173,22 @@ public class Practice1 {
                     System.out.println("입력오류");
                     break;
             }
+        }
+    }
+
+    public void method6() {
+        System.out.println("사용자권한 (관리자,회원,비회원 중) 입력 : ");
+        String role = sc.next();
+
+
+        if ("관리자".equals(role)) {
+            System.out.println("회원관리, 게시글관리, 게시글 작성, 게시글조회, 댓글작성 가능");
+        } else if ("회원".equals(role)) {
+            System.out.println("게시글 작성, 게시글조회, 댓글작성 가능");
+        } else if ("비회원".equals(role)){
+            System.out.println("게시글조회 가능");
+        } else {
+            System.out.println("입력오류");
         }
     }
 }

@@ -9,6 +9,7 @@ public class Practice1Run {
 //        p.method2();
 //        System.out.println("로그인 문제");
 //        p.method3();
-        p.method10();
+       //p.method10();
+        p.method6();
     }
 }
