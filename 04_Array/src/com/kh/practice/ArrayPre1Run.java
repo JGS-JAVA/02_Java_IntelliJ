@@ -12,6 +12,7 @@ public class ArrayPre1Run {
         //arrayPre1.practice3();
         //arrayPre1.practice4();
        // arrayPre1.practice6();
-       arrayPre1.practice6A();
+       //arrayPre1.practice6A();
+       arrayPre1.practice6B();
     }
 }
