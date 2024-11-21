@@ -35,5 +35,7 @@ public class Void메서드 {
         System.out.println("pw는 " + pw + "이다");
 
     }
-
+    public void findId(String id, String email){
+        System.out.println("아이디는 abc 이다");
+    }
 }
