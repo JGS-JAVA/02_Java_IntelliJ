@@ -23,7 +23,7 @@ public class Lotto {
             //카운트는 현재까지 저장된 유효한 번호 갯수 나타냄
             //기존 번호와 새 번호가 중복여부 확인
             //배열에서 채워진 부분만 새 번호와 비교한다
-            for (int i = 0; i < count; i++);{
+            for (int i = 0; i < count; i++){
                 if (num == lotto[i]){
                     중복확인 = true;
                     break; // 기존수와 랜덤수 같으면 돌려보내기
