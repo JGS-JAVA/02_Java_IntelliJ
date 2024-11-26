@@ -8,6 +8,7 @@ add(E e) 리스트 끝에 요소값 추가
 add(int index, E e) 특정 인덱스위치에 요소값 추가
 remove(int index): 특정 인덱스위치에 요소값 삭제
 remove(Object o): 지정된 요소값 삭제 (처음 발견된 값만 삭제)
+                만약 정수형 값 30 삭제시 remove(Integer.valueOf(30)); 으로 한다
 set(int index, E e) : 특정 인덱스위치에 요소값 변경
 get(int index, E e) : 특정 인덱스위치에 요소값 반환
 size(): 리스트 크기 반환

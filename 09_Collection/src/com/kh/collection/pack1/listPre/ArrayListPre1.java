@@ -1,9 +1,9 @@
 package com.kh.collection.pack1.listPre;
 
-public class ArrayList {
+public class ArrayListPre1 {
 
     public void method1(){
-        ArrayList<String> list1 = new ArrayList<String>(5);
+        ArrayListPre1<String> list1 = new ArrayListPre1<String>(5);
         list1.add("새우깡");
         list1.add("맛동산");
         list1.add("포카칩");
@@ -41,7 +41,7 @@ public class ArrayList {
 * */
 
     public void method2(){
-        ArrayList<String> list2 = new ArrayList<String>(5);
+        ArrayListPre1<String> list2 = new ArrayListPre1<String>(5);
         list2.add("사과");
         list2.add("포도");
         list2.add("바나나");
@@ -72,18 +72,28 @@ public class ArrayList {
 
     /**/
     public void method3(){
-        ArrayList<Integer> intList=new ArrayList<Integer>();
+        ArrayListPre1<Integer> intList=new ArrayListPre1<Integer>();
         intList.add(1);
         intList.add(10);
         intList.add(100);
         System.out.println(intList);
 
-        ArrayList<Character> charList=new ArrayList<Character>();
+        ArrayListPre1<Character> charList=new ArrayListPre1<Character>();
         charList.add('a');
         charList.add('b');
         charList.add('c');
         charList.add('가');
         System.out.println(charList);
+
+        ArrayListPre1<Boolean> booleanList=new ArrayListPre1<Boolean>();
+        booleanList.add(true);
+        booleanList.add(false);
+        System.out.println(booleanList);
+
+        ArrayListPre1<Double> doubleList=new ArrayListPre1<Double>();
+        doubleList.add(1.5);
+        doubleList.add(3.14);
+        System.out.println(doubleList);
 
     }
 
