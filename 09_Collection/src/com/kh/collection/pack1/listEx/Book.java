@@ -1,12 +1,10 @@
-package com.kh.poly.pack2.bookPre;
+package com.kh.collection.pack1.listEx;
 
 public class Book {
-    //필드
     private String title;
     private String author;
     private int price;
 
-//메서드 기본 필드 세터 게터 투스트링
     public Book() {
     }
 
@@ -16,28 +14,28 @@ public class Book {
         this.price = price;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public void setAuthor(String author) {
-        this.author = author;
-    }
-
-    public void setPrice(int price) {
-        this.price = price;
-    }
-
     public String getTitle() {
         return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public String getAuthor() {
         return author;
     }
 
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
     public int getPrice() {
         return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
     }
 
     @Override
@@ -48,6 +46,4 @@ public class Book {
                 ", price=" + price +
                 '}';
     }
-//부모클래스에 toString 안쓰면 다음처럼 출력됨
-    //
 }

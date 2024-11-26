@@ -1,0 +1,24 @@
+
+자료형 제한하기 -> 기본 자료형을 클래스화 한 자료형 가져와서 사용
+Wrapper class = 기본타입을 객체처럼 사용할수 있게 감싸는 클래스
+
+기본 -> 래퍼(대문자 시작)
+int -> Integer
+char -> Character
+boolean -> Boolean
+double -> Double
+float -> Float
+long -> Long
+short -> Short
+byte -> Byte
+
+
+ArrayList<원하는 자료형> list1 = new ArrayList<원하는 자료형>();
+ArrayList<Integer> list1 = new ArrayList<Integer>();
+ArrayList<Character> list1 = new ArrayList<Character>();
+ArrayList<Boolean> list1 = new ArrayList<Boolean>();
+ArrayList<Double> list1 = new ArrayList<Double>();
+ArrayList<Float> list1 = new ArrayList<Float>();
+ArrayList<Long> list1 = new ArrayList<Long>();
+ArrayList<Short> list1 = new ArrayList<Short>();
+ArrayList<Byte> list1 = new ArrayList<Byte>();
