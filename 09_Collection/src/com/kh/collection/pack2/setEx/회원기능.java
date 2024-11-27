@@ -8,8 +8,8 @@ public class 회원기능 {
     회원 user = new 회원();
     HashSet<회원> userList = new HashSet<회원>();
     //회원추가기능
-    public void addUser(){
-        if(menu.add(user)){
+    public void addUser(회원 u){
+        if(userList.add(u)){
             System.out.println("추가 성공");
 
         }else{
@@ -43,7 +43,7 @@ public class 회원기능 {
     }
     }
     //회원삭제기능
-    public void deleteUser(){
+    public void deleteUser(int id){
     for(회원 user : userList){
         if(user.getId() == id){
             userList.remove(user);

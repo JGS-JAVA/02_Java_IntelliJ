@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class BookMenu {
     Scanner sc = new Scanner(System.in);
     Book bk = new Book();
-    ArrayList list = new ArrayList();
+    ArrayList<Book> list = new ArrayList<Book>();
 
     public void insertBook() {
         if(list.add(bk)) {
@@ -21,7 +21,7 @@ public class BookMenu {
     * 매개변수명이자 파라미터로 어떤 검색을 해서 가져올지 설정
     * */
     public void searchBook(String title) {
-        for(bk : list){
+        for(Book bk : list){
             if(bk.getTitle() == title){
                 System.out.println(bk);
             }else {
@@ -31,7 +31,7 @@ public class BookMenu {
         }
     }
     public void deleteBook(String title) {
-        for(bk : list){
+        for(Book bk : list){
             if(bk.getTitle() == title){
                 list.remove(bk);
                 break;

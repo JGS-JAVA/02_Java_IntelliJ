@@ -21,7 +21,7 @@ public class 회원기능실행 {
 
         회원기능.searchUser(2);
 
-        회원기능.deleteUser();
+        회원기능.deleteUser(1);
 
     }
 }

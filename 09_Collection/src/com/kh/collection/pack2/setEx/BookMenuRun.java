@@ -8,9 +8,9 @@ public class BookMenuRun {
         BookMenu bm = new BookMenu();
 
         Scanner sc = new Scanner(System.in);
-
+        String title = sc.nextLine();
         bm.insertBook();
-        bm.searchBook();
-        bm.deleteBook();
+        bm.searchBook(title);
+        bm.deleteBook(title);
     }
 }
