@@ -194,7 +194,7 @@ public class HashSetPre1 {
 //        while(it.hasNext()){
 //            System.out.println(it.next());
 //        }
-        for
+
     }
 }
 
