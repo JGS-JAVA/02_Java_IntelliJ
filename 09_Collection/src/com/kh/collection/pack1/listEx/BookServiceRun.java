@@ -1,4 +1,4 @@
-package com.kh.CollectionEx.pack1.listEx;
+package com.kh.collection.pack1.listEx;
 
 import java.util.Scanner;
 
@@ -38,9 +38,8 @@ public class BookServiceRun {
                     System.out.print("지우고자 하는 책의 제목을 입력하세요 : ");
                     String removeTitle = scanner.nextLine();
 
-                    // 만약에 책 제목이 존재한다면 책을 삭제했습니다.
+                   bookService.removeBook(removeTitle);
 
-                    // 만약에 책이 없다면 책 제목을 찾을 수 없습니다.
                     break;
                 case 3:
                     //책 리스트를 모두 보는 곳

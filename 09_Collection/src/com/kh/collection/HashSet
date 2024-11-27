@@ -1,0 +1,21 @@
+
+중복데이터 불허, 저장값 순서 무작위
+효율적 저장,검색을 위함
+
+1. 동일값 존재시 추가불가
+2. 저장순서 무작위, 내부적으로 hashing 기법
+3. null 값 저장 허용 (최초 1회만)
+4. index 없다
+
+주요 메서드(주요기능)
+
+add(E e) 리스트 끝에 요소값 추가
+remove(Object o): 지정된 요소값 삭제 (처음 발견된 값만 삭제)
+                만약 정수형 값 30 삭제시 remove(Integer.valueOf(30)); 으로 한다
+size(): 리스트 크기 반환
+isEmpty(): 리스트 비었는지 확인
+contains(Object o): 리스트에 특정요소 있나 확인
+clear() : 모든요소 삭제
+addAll(Collection c): 다른 컬렉션의 모든 요소 복사해 추가
+iterator() : iterator 반환해 순차적 회전(for문 대신 이용)가능
+
