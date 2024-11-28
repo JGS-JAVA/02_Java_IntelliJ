@@ -48,7 +48,7 @@ public class MapService {
     //향상 for문으로 순차접근해 출력
     //맵도 인덱스 없어서 Map.keySet()으로 접근
     public void method2(){
-        Map.<String,String> map = new HashMap<String,String>();
+        Map<String,String> map = new HashMap<String,String>();
         map.put("학원","서울 강남");
         map.put("집","경기");
         map.put("63","서울 영등");

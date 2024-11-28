@@ -1,0 +1,63 @@
+
+file 클래스
+java.io 폴더 내 존재하는 java 파일
+파일/디렉토리(폴더) 관리 클래스
+(파일/디렉토리 유무 무관히)
+파일생성 제거 이름 크기 마지막수정일 존재여부 등 기능제공
+
+file 클래스 메서드
+boolean mkdir() : 하나의 폴더생성. make directory
+boolean mkdirs() : 경로상 모든 폴더생성. make directorys
+boolean createNewFile() : 파일생성
+boolean delete() : 파일/폴더 삭제
+String getName() : 파일이름 반환
+String parent() : 파일 든 폴더 반환
+String getPath() : 전체경로 반환
+boolean isFile() : 현제 파일 객체가 관리하는게 파일이면 참,
+boolean isDirectory() : 현제 파일 객체가 관리하는게 폴더이면 참,
+boolean exists() : 파일/폴더 존재하면 참,
+long length() : 파일크기 변환
+long lastModified() : 파일 마지막수정일 시간을 마이크로 초 단위로 반환
+String[] list() : 폴더 내 파일목록 스트링 배열로 반환
+File[] listFiles() : 폴더 내 파일목록 파일 배열로 반환
+
+        //C:/Users/user1/Desktop>
+        //C:/Users/user1/바탕화면>
+
+        //바탕화면에 만들기
+      System.getProperty("user.home") = 현재 사용하는 유저 바탕화면 오기 전 폴더위치 설정
+                                        C:/Users/user1/ 여기까지 작성해주는것
+      File 폴더=new File(System.getProperty("user.home")+"/Desktop/newFolders");
+                                        C:/Users/user1/ 뒤에 바탕화면 폴더에 newFolders 폴더 생성
+        getPath(): 현재 만들 폴더 전체경로
+        getAbsolutePath() : 어디서 보든 무조건적 폴더 전체경로
+
+        [개발자 상식]
+        OS : operating system 운영 체제
+                    windows                 linux                      mac
+                    폴더                      디렉토리                   디렉토리
+        경로표기법  C:\Users\user1           C:/Users/user1              C:/Users/user1
+
+        자바는 os 무관히 /\ 둘다 가능
+        되도록 경로표기는 / 쓰기
+
+        1. 절대경로 : 하나의 절대기준에서 목표까지의 경로 모두 표기
+        윈도우: C:/        D:/
+        리눅스,맥: /Users,  /
+
+        2. 상대경로 : 현재위치를 기준으로 목표까지의 경로 표기
+
+
+        System.out.println("폴더위치:"+폴더.getPath());
+
+        System.out.println("폴더절대경로"+폴더.getAbsolutePath());
+        //                    :C:/newFolder
+        System.out.println("폴더이름: "+폴더.getName());
+        System.out.println("폴더존재확인: "+폴더.exists());
+
+        //폴더생성
+        폴더.mkdir();
+        System.out.println("폴더생성 완료");
+
+
+
