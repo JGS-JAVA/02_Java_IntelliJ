@@ -2,11 +2,9 @@ package com.kh.pack2.pre1;
 
 public class FileReadWriteRun {
     public static void main(String[] args) {
-        FileReadWrite writer = new FileReadWrite();
-     //  writer.method1();
-     //  writer.method2();
-       writer.method3();
-        FileWritePre writePre = new FileWritePre();
-
+        com.kh.pack2.FileReadWrite frw = new com.kh.pack2.FileReadWrite();
+        //frw.method1();
+        //frw.method2();
+        frw.method3();
     }
 }
