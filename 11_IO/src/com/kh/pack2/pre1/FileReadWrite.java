@@ -1,9 +1,6 @@
-package com.kh.pack2;
+package com.kh.pack2.pre1;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 
 public class FileReadWrite {
     //파일 바탕화면에 만들고 파일 안에 글자 작성
@@ -57,6 +54,30 @@ public class FileReadWrite {
         } finally {
            System.out.println("종료");
 
+        }
+    }
+    
+    //FileReader = 파일에서 문자 데이터 한글자씩 읽는 클래스, 느리다
+    // BufferedReader = 파일리더에 버퍼링기능 추가한 클래스
+    //                   줄단위로 데이터 읽어 빠르다
+    //버퍼 : 데이터 가져오기
+    public void method3(){
+        File file = new File(System.getProperty("user.home")+"/Desktop/ex1.txt");
+        try {
+            FileReader fr = new FileReader(System.getProperty("user.home")+"/Desktop/ex1.txt");
+            BufferedReader br = new BufferedReader(file);
+            //String line = br.readLine(); //무한루프
+            String line; //while 문에 자료형 못써서 여기 쓴다
+                            //글자를 담고 출력할 공간 생성
+
+            while ((line= br.readLine()) != null) {  //line 이라는 공간에 한줄의 글자들 담고
+                System.out.println(line);           //출력한다
+            }
+            br.close(); //br 먼저 닫기
+            fr.close();
+            
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
     }
 }
