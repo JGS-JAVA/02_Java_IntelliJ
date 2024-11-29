@@ -2,6 +2,8 @@ package com.kh.pack1.fileEx;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class FileService {
     public void method1(){
@@ -43,6 +45,35 @@ public class FileService {
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
+        }
+    }
+
+//해당폴더에서 주소창에 cmd 치면 위치 나온다
+    public void method3()  {
+   // System.out.println(System.getProperty("user.home")+"/Downloads"); //확인할 폴더경로
+
+        //특정폴더위치에 있는 파일,폴더 배열형태로 가져오기
+        // 역슬래시는 슬래시로 바꾸기 ctrl + f
+        File[] files = File.listRoots(); 
+        // C:/Users/user1/Downloads> 에 있는것 목록으로 가져오기
+        //향상된 for문 ->
+        //폴더 열 때 이미지,동영상 파일 많을때 for 문 돌려서 시간이 걸린다
+        for(File f : files){
+            System.out.println(f.getName());
+            System.out.println(f.length()); //파일크기
+            System.out.println(f.lastModified());
+            //마지막 수정날짜 1970년1월1일부터 지난 날짜수 = 1732772913147
+            long lastModified = f.lastModified(); //f 아래 파일 많다 그 중 마지막 수정일 선택
+            Date date = new Date(lastModified);
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+            //간단한 날짜 표기 객체
+            String formatDate = sdf.format(date);
+           // String formatDate = sdf.format(f.lastModified());
+            //날짜형식을 문자열로 형변환
+            System.out.println(date);
+            //Cannot format given Object as a Date 에러발생
+            //마지막 수정날짜를 최대한 큰 공간 long 으로 가져와서 변환해서 날짜 끝수 잘리지 않게 하기
+
         }
     }
 }
